@@ -1,0 +1,9 @@
+﻿artifacts/
+*.engine
+*.onnx
+*.wav
+*.mp4
+*.log
+__pycache__/
+.venv/
+.ipynb_checkpoints/

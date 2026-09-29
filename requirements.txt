@@ -1,0 +1,43 @@
+# Python 3.12+, CUDA 12, NVIDIA GPU. Install torch and torchaudio together and pin
+# torchaudio to the exact torch version, or MioCodec's import fails with
+# "undefined symbol: torch_library_impl".
+torch>=2.6,<2.8
+torchaudio          # must match torch exactly, e.g. torch 2.7.1 -> torchaudio 2.7.1
+tensorrt<=10.12
+
+numpy==2.0.*
+onnx
+onnx-graphsurgeon   # engine build only
+einops
+anyio
+huggingface_hub
+imageio
+imageio-ffmpeg
+opencv-python-headless
+tqdm
+attrs
+tenacity
+kornia
+scikit-image
+soxr
+roma
+av
+soundfile
+safetensors
+httpx
+
+# TTS
+transformers>=4.51
+accelerate
+sentencepiece
+protobuf
+miocodec @ git+https://github.com/Aratako/MioCodec
+
+# server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# loadtest.py only
+requests
+websocket-client
